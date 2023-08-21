@@ -36,11 +36,14 @@ while True:
 
     operacao = int(input("Digite o número para a operação correspondente: "))
 
-    if operacao == 0:
+    if operacao < 0 or operacao > 4:
+        print("Essa opção não existe")
+        continue
+    elif operacao == 0:
         break
-
-    num1 = int(input("Digite o primeiro valor: "))
-    num2 = int(input("Digite o segundo valor: "))
+    else:
+        num1 = int(input("Digite o primeiro valor: "))
+        num2 = int(input("Digite o segundo valor: "))
 
     resultado = calculadora(num1, num2, operacao)
 
